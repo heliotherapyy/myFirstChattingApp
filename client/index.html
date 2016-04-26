@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- dependencies -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="scripts/firebase.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row row-centered">
+        <div class="col-xs-8 col-md-8 col-centered">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-comment"></span> Chat
+              <span class="currentRoom">OpenChat</span>
+              <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <ul class="dropdown-menu slidedown">
+                  <li>
+                    <a href='#' id='find' data-toggle="modal" data-target="#roomModal">
+                      Find a room
+                    </a>
+                  </li>
+                  <li>
+                    <a href='#' id='exit'>
+                      Exit room
+                    </a>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <a href='#' id='settings' data-toggle="modal" data-target="#settingsModal">
+                      <span class="glyphicon glyphicon-wrench"></span>Settings
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              <ul class="chat">
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group">
+                <input id="nameInput" type="text" class="form-control input-sm" placeholder="name">
+                <input id="messageInput" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                <span class="input-group-btn">
+                <button class="btn btn-warning btn-sm" id="submit">
+                Send</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="roomModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Available Rooms</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="rooms">
+              <!-- <a href="#">Some text in the modal.</a> -->
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary make" data-dismiss="modal">Make a room</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="settingsModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Settings</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="myUsernames">
+              <span>Usernames</span>
+              <!-- <a href="#">Some text in the modal.</a> -->
+            </ul>
+            <hr>
+            <div class="myProfile">
+              <div>Profile</div>
+            </div>
+            <hr>
+            <div class="myImage">
+              <div>Image</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary changeSettings" data-dismiss="modal">Change</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

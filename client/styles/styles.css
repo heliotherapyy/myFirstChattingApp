@@ -1,0 +1,113 @@
+.username {
+  cursor: pointer;
+}
+.friend{
+  font-weight: bold;
+}
+
+body {
+  margin-top: 2%;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+#nameInput {
+ width: 20%;
+ display: inline-block;
+}
+
+#messageInput {
+ width: 80%;
+ display: inline-block;
+}
+
+#submit {
+    opacity: 0;
+    transition: all 0.3s;
+    /*transition: popup 1s;*/
+    /*animation-name: popup;*/
+    animation-duration: 0.5s;
+}
+
+@keyframes popup {
+    from {transform: scale(0.8);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.currentRoom {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    text-align: center;
+}
+
+.chat, .rooms, .myUsernames
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 600px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
